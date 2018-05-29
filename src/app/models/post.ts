@@ -4,5 +4,4 @@ export interface Post {
   loveIts: number;
   created_at: Date;
 
-  love();
 }
