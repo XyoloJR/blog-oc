@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './models/post';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  posts : Post[];
+
+  constructor(){
+    this.posts = new Array();
+    this.posts.push({title: 'prem\'s', content: 'mon premier post', loveIts: 0, created_at: new Date()})
+  }
 }
