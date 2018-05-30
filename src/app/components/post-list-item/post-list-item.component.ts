@@ -7,7 +7,7 @@ import {Post} from '../../models/post';
   styleUrls: ['./post-list-item.component.scss']
 })
 export class PostListItemComponent implements OnInit {
-  @Input() post : Post;
+  @Input() post: Post;
 
   addLoveIt () {
     this.post.loveIts++;

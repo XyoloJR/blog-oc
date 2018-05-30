@@ -7,29 +7,21 @@ import { Post } from './models/post';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  posts : Post[];
+  public posts: Post[];
 
-  constructor(){
+  constructor() {
     this.posts = new Array();
-    this.posts.push({
-      title: 'prem\'s', 
-      content: 'mon premier post', 
-      loveIts: 0, created_at: new Date()
-    });
-    this.posts.push({
-      title: 'deuze', 
-      content: 'Et là c\'est le drame', 
-      loveIts: 1, created_at: new Date()
-    });
-    this.posts.push({
-      title: 'troize', 
-      content: 'Encore un peu de texte par ici', 
-      loveIts: 2, created_at: new Date()
-    });
-    this.posts.push({
-      title: 'quartz', 
-      content: 'Un dernier petit message inintéressant au possible', 
-      loveIts: -3, created_at: new Date()
-    });
+    this.posts.push(
+      new Post('prem\'s', 'mon premier post')
+    );
+    this.posts.push(
+      new Post('deuze', 'Et là c\'est le drame')
+    );
+    this.posts.push(
+      new Post('troize', 'Encore un peu de texte par ici')
+    );
+    this.posts.push(
+      new Post('quartz', 'Un dernier petit message inintéressant au possible')
+    );
   }
 }
