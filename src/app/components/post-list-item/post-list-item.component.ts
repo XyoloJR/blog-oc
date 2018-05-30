@@ -9,14 +9,6 @@ import {Post} from '../../models/post';
 export class PostListItemComponent implements OnInit {
   @Input() post: Post;
 
-  addLoveIt () {
-    this.post.loveIts++;
-  }
-
-  removeLoveIt() {
-    this.post.loveIts--;
-  }
-
   constructor() {
   }
 

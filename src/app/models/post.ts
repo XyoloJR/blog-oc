@@ -11,4 +11,11 @@ export class Post {
     this.created_at = new Date();
   }
 
+  love = () => {
+    this.loveIts++;
+  }
+  dontLove = () => {
+    this.loveIts--;
+  }
+
 }
