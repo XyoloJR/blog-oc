@@ -33,7 +33,12 @@ export class PostsService {
   }
 
   removePost(post: Post) {
-    
+    const index = this.posts.findIndex(
+      (element: Post) => {
+        return element.title === post.title && element.created_at === post.created_at;
+      }
+    );
+    this.posts.splice(index, 1);
+    this.emitPostsSubject();
   }
-
 }
