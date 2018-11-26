@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PostsService } from '../../services/posts.service';
 import { Post } from '../../models/post';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-post',
@@ -14,7 +15,8 @@ export class NewPostComponent implements OnInit {
 
   constructor(
     private builder: FormBuilder,
-    private postsService: PostsService
+    private postsService: PostsService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -31,5 +33,7 @@ export class NewPostComponent implements OnInit {
         this.form.value['content']
       )
     );
+    this.router.navigate(['/post']);
+
   }
 }

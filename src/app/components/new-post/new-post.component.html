@@ -1,5 +1,5 @@
 <h1>Nouveau Message</h1>
-<form formGroup="form" (ngSubmit)="onSubmit()" >
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
   <div class="form-group">
     <label for="title">Titre</label>
     <input type="text" formControlName="title" id="title" class="form-control">

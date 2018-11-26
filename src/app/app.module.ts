@@ -8,6 +8,7 @@ import { NewPostComponent } from './components/new-post/new-post.component';
 import { NavComponent } from './components/nav/nav.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PostsService } from './services/posts.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'posts', component: PostListComponent },
@@ -26,6 +27,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [PostsService],
